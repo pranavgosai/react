@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-function MyRouter()
-{
-    const [name,setName]= useState();
-        const Textchang =(e)=>{
-            setName(e.target.value);
-    }
-    
-    
-    return(
-        <div>
-    
-    <input type="text" placeholder='text' onChange={Textchang} />
-      <p>hi{name}</p>
 
-        </div>
-       
-    )
-}
-root.render(<MyRouter />);
+import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MoreDeets from './MoreDeets';
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ <>
+
+<MoreDeets/>
+
+ </>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
